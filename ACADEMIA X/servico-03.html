@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia X - Fale conosco</title>
+    
+    <!-- Icon aba -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="logoX.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+        background: #050b18;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        }
+
+
+        header.hero {
+        position: relative;
+        width: 100%;
+        height: 55vh;
+        background: url('musculacao.jpg') center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+
+
+        header.hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        }
+
+
+        header.hero h1 {
+        position: relative;
+        z-index: 2;
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+        }
+
+
+        .content-section {
+        max-width: 1100px;
+        margin: 60px auto;
+        padding: 0 20px;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">
+    <div class="container">
+        <div class="row w-100">
+            <div class="col-12 d-flex justify-content-between align-items-center flex-wrap">
+                
+                <div class="d-flex align-items-center flex-wrap gap-4">
+                    <!-- Logo -->
+                    <a href="index.html">
+                        <img src="IMG_5573.png" alt="Logo" width="190" class="nav-logo">
+                    </a>
+
+                    <!-- Links -->
+                    <div class="collapse navbar-collapse show" id="navbarNav">
+                        <ul class="navbar-nav d-flex flex-row gap-2 align-items-center m-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">INÍCIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">PRODUTOS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contato.html">CONTATO</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Botão -->
+                    <a href="matricula.html" class="btn btn-primary btn-matricula">
+                        Faça sua matrícula
+                    </a>
+                </div>
+
+                <form class="form-inline my-2 my-md-0 search-form">
+                <input class="form-control" type="text" placeholder="Pesquisa" aria-label="Search">
+                </form>
+
+                <!-- Toggler (pra manter a responsividade) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            </div>
+        </div>
+    </div>
+    </nav>
+
+    <main class="flex-grow-1"></main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <header class="faixa-header lutas">
+      <h1></h1>
+    </header>
+
+    <section class="content-section text-white">
+      <h2>Lutas</h2>
+      <p>
+      As aulas de Lutas da Academia X foram criadas para quem busca disciplina, condicionamento físico e autoconfiança, independente do nível atual. Aqui o aluno aprende técnicas reais de combate, melhora a capacidade cardiovascular e desenvolve coordenação e reflexos. As aulas são dinâmicas, acessíveis para iniciantes e também desafiadoras para quem já tem experiência. Temos modalidades para todos os estilos e objetivos. Desde defesa pessoal até competição.
+      </p>
+
+      <div class="beneficios">
+        <h2>Modalidades disponíveis</h2>
+        <ul>
+          <li>Muay Thai</li>
+          <li>Jiu-Jitsu</li>
+          <li>Boxe</li>
+          <li>MMA</li>
+          <li>Defesa Pessoal</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="cta">
+    <a href="matricula.html">Quero me matricular</a>
+    </div>
+
+<script>
+    // Exemplo: Ativa tooltips do Bootstrap
+    document.addEventListener('DOMContentLoaded', function() {
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (element) {
+            return new bootstrap.Tooltip(element)
+        });
+    });
+</script>
+
+<footer class="text-white mt-5 gradient-footer">
+    <div class="container py-4">
+        <div class="row">
+            <!-- Seção About -->
+            <div class="col-12 col-md-3">
+                <h5>Sobre Nós</h5>
+                <p>Carregamos o comprometimento com a saúde, bem-estar e qualidade de vida.
+                    Oferecendo estrutura moderna, equipe qualificada e um ambiente motivador para os seus objetivos! </p>
+            </div>
+
+            <!-- Links Rápidos -->
+            <div class="col-12 col-md-3">
+                <h5>Links Úteis</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="list-item text-white">Home</a></li>
+                    <li><a href="#" class="list-item text-white">Produtos</a></li>
+                    <li><a href="#" class="list-item text-white">Política de Privacidade</a></li>
+                </ul>
+            </div>
+
+            <!-- Contato -->
+            <div class="col-12 col-md-3">
+                <h5>Contato</h5>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-envelope"></i> academiaxcontato@gmail.com</li>
+                    <li><i class="bi bi-phone"></i> (21) 1234-5678</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 border-start border-light ps-3 mt-4 mt-md-0 d-flex align-items-center justify-content-center">
+                <a href="index.html" class="me-3">
+                    <img src="IMG_5571.png" alt="Logo Academia X" width="100">
+                </a>
+                <a href="https://www.gsuplementos.com.br/">
+                    <img src="growth_logo.png" target="_blank" rel="noopener noreferrer" alt="Logo Growth Suplementos" width="100">
+                </a>
+            </div>
+        </div>
+        <hr class="bg-light">
+        <div class="text-center">
+            <p class="mb-0">2025 Academia X. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

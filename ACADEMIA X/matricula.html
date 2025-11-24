@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia X - Matrícula</title>
+    
+    <!-- Icon aba -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="logoX.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">
+    <div class="container">
+        <div class="row w-100">
+            <div class="col-12 d-flex justify-content-between align-items-center flex-wrap">
+                
+                <div class="d-flex align-items-center flex-wrap gap-4">
+                    <!-- Logo -->
+                    <a href="index.html">
+                        <img src="IMG_5573.png" alt="Logo" width="190" class="nav-logo">
+                    </a>
+
+                    <!-- Links -->
+                    <div class="collapse navbar-collapse show" id="navbarNav">
+                        <ul class="navbar-nav d-flex flex-row gap-2 align-items-center m-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">INÍCIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">PRODUTOS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contato.html">CONTATO</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Botão -->
+                    <a href="#" class="btn btn-primary btn-matricula">
+                        Faça sua matrícula
+                    </a>
+                </div>
+
+                <form class="form-inline my-2 my-md-0 search-form">
+                <input class="form-control" type="text" placeholder="Pesquisa" aria-label="Search">
+                </form>
+
+                <!-- Toggler (pra manter a responsividade) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            </div>
+        </div>
+    </div>
+    </nav>
+
+    <main class="flex-grow-1"></main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <section class="secao-plano mb-5">
+        <section class="text-center mt-3">
+        <h1 class="fw-bold text-white">Escolha o plano ideal para você</h1>
+        <p class="mt-2 mb-5 text-white">Selecione um dos planos abaixo para continuar com a matrícula.</p>
+        </section>
+
+
+        <div class="container mb-5">
+        <div class="row justify-content-center g-4">
+
+            <!-- PLANO 1 -->
+            <div class="col-md-4">
+            <div class="card-plano text-center p-4">
+            <h3 class="fw-bold text-white">Plano Básico</h3>
+            <p class="text-secondary">Para quem está começando</p>
+            <h2 class="preco-plano fw-bold">R$ 79<span>/mês</span></h2>
+            <hr style="border-color:#123;">
+            <ul class="list-unstyled">
+                <li>Acesso total à musculação</li>
+                <li>Treinos personalizados básicos</li>
+                <li>Acesso em horário comercial</li>
+            </ul>
+            <a href="matricula.html?plano=basico" class="btn btn-warning fw-bold w-100 mt-3">Escolher Plano</a>
+            </div>
+        </div>
+
+            <!-- PLANO 2 (DESTAQUE) -->
+            <div class="col-md-4">
+                <div class="card-plano destaque text-center p-4">
+                    <h3 class="fw-bold text-warning">Plano Premium</h3>
+                    <p class="text-secondary">Melhor custo-benefício</p>
+                    <h2 class="preco-plano fw-bold text-warning">R$ 119<span>/mês</span></h2>
+                    <hr style="border-color:#ff8800;">
+                    <ul class="list-unstyled">
+                    <li>Tudo do Básico</li>
+                    <li>Aulas coletivas inclusas</li>
+                    <li>Acesso ilimitado</li>
+                    <li>Descontos em suplementos</li>
+                    </ul>
+                    <a href="matricula.html?plano=premium" class="btn btn-warning fw-bold w-100 mt-3">Escolher Plano</a>
+                </div>
+            </div>
+
+
+            <!-- PLANO 3 -->
+            <div class="col-md-4">
+                <div class="card-plano text-center p-4">
+                    <h3 class="fw-bold text-white">Plano Elite</h3>
+                    <p class="text-secondary">Para quem quer tudo</p>
+                    <h2 class="preco-plano fw-bold">R$ 179<span>/mês</span></h2>
+                    <hr style="border-color:#123;">
+                    <ul class="list-unstyled">
+                    <li>Tudo do Premium</li>
+                    <li>Acompanhamento do personal incluso</li>
+                    <li>Avaliação física mensal</li>
+                    </ul>
+                    <a href="matricula.html?plano=elite" class="btn btn-warning fw-bold w-100 mt-3" >Escolher Plano</a>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="modalMatricula" class="modal-overlay">
+        <div class="modal-content position-relative">
+            
+            <button class="btn-close-modal" onclick="fecharModal()">×</button>
+
+            <div id="etapa1">
+                <h2 class="fw-bold">Seus dados</h2>
+                <p class="text-white">Plano escolhido: <strong id="plano-escolhido" class="text-warning"></strong></p>
+
+                <input type="text" id="nome" class="form-control mt-3" placeholder="Nome completo">
+                <input type="email" id="email" class="form-control mt-3" placeholder="E-mail">
+                <input type="text" id="telefone" class="form-control mt-3" placeholder="Telefone">
+                <input type="text" id="cpf" class="form-control mt-3" placeholder="CPF">
+                <input type="date" id="nascimento" class="form-control mt-3">
+
+                <button class="btn btn-warning w-100 mt-4 fw-bold" onclick="irParaPagamento()">
+                    Avançar
+                </button>
+            </div>
+
+            <div id="etapa2" style="display: none;">
+                <h2 class="fw-bold mb-3">Pagamento</h2>
+
+                <select id="metodo" class="form-control">
+                    <option value="cartao">Cartão de Crédito</option>
+                    <option value="pix">PIX</option>
+                </select>
+
+                <div id="cartao" class="mt-3">
+                    <input type="text" class="form-control mt-2" placeholder="Número do cartão">
+                    <input type="text" class="form-control mt-2" placeholder="Validade (MM/AA)">
+                    <input type="text" class="form-control mt-2" placeholder="CVV">
+                    <input type="text" class="form-control mt-2" placeholder="Nome do cartão">
+                </div>
+
+                <div id="pix" class="mt-4 text-white" style="display:none;">
+                    <p>Chave PIX da academia:</p>
+                    <div class="p-2 bg-dark rounded fw-bold">academiax@pagamentos.com</div>
+                </div>
+
+                <div class="d-flex gap-2 mt-2">
+                    <button class="btn btn-secondary w-50" onclick="voltarParaDados()">Voltar</button>
+                    <button class="btn btn-warning w-50 fw-bold" onclick="concluirMatricula()">Concluir</button>
+                </div>
+            </div>
+
+    </div>
+</div>
+
+<script>
+    // Exemplo: Ativa tooltips do Bootstrap
+    document.addEventListener('DOMContentLoaded', function() {
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (element) {
+            return new bootstrap.Tooltip(element)
+        });
+    });
+
+    document.querySelectorAll("a[href^='matricula']").forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const plano = new URL (btn.href).searchParams.get('plano');
+            document.getElementById('plano-escolhido').innerText = 
+                plano.charAt(0).toUpperCase() + plano.slice(1);
+
+            document.getElementById('modalMatricula').style.display = 'flex';
+            document.getElementById('etapa1').style.display = 'block';
+            document.getElementById('etapa2').style.display = 'none';
+        });
+    });
+
+    function fecharModal() {
+        document.getElementById("modalMatricula").style.display = 'none';
+    }
+
+    function irParaPagamento() {
+        const campos = ['nome', 'email', 'telefone', 'cpf', 'nascimento'];
+        let valido = true;
+
+        campos.forEach(id => {
+            const campo = document.getElementById(id);
+            if (!campo.value.trim()) {
+                campo.classList.add('campo-erro');
+                valido = false; 
+            } else {
+                campo.classList.remove('campo-erro');
+            }
+        });
+
+        if (!valido) {
+            alert('Preencha todos os campos antes de avançar.');
+            return;
+        }
+
+        document.getElementById('etapa1').style.display = 'none';
+        document.getElementById('etapa2').style.display = 'block';
+    }
+
+    function voltarParaDados() {
+        document.getElementById('etapa2').style.display = 'none';
+        document.getElementById('etapa1').style.display = 'block';
+    }
+
+    document.addEventListener('change', () => {
+        const metodo = document.getElementById('metodo').value;
+        document.getElementById('cartao').style.display = metodo === 'cartao' ? 'block' : 'none';
+        document.getElementById('pix').style.display = metodo === 'pix' ? 'block' : 'none';
+    })
+
+    function concluirMatricula() {
+        const metodo = document.getElementById('metodo').value;
+
+        if (metodo === 'cartao') {
+            const camposCartao = [
+                '#cartao input:nth-child(1)',
+                '#cartao input:nth-child(2)',
+                '#cartao input:nth-child(3)',
+                '#cartao input:nth-child(4)'
+            ];
+
+            let valido = true;
+
+            camposCartao.forEach(selector => {
+                const campo = document.querySelector(selector);
+                if (!campo.value.trim()) {
+                    campo.classList.add('campo-erro');
+                    valido = false;
+                } else {
+                    campo.classList.remove('campo-erro');
+                }
+            });
+
+            if (!valido) {
+                alert('Preencha todos os dados do cartão para concluir.');
+                return;
+            }
+        }
+
+        alert('Pagamento concluído! Matrícula concluída com sucesso.');
+        fecharModal();
+    }
+
+    // mascara telefone
+    document.getElementById('telefone').addEventListener('input', function() {
+        let valor = this.value;replace(/\D/g, '');
+        if (valor.length > 11) valor = valor.slice(0, 11);
+
+        if (valor.length <= 10) {
+            this.value = valor.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+        } else {
+            this.value = valor.replace(/(\d{2})(\d{5})(\d{0,4})/, "($1) $2-$3");
+        }
+    });
+
+    // mascara cpf
+    document.getElementById('cpf').addEventListener('input', function() {
+        let valor = this.value.replace(/\D/g, '');
+        if (valor.length > 11) valor = valor.slice(0, 11);
+        this.value = valor.replace(/(\d{3})(\d{3})(\d{3})(\d{0,2})/, "$1.$2.$3-$4");
+    });
+
+    // mascara cartão
+    document.querySelector('#cartao input:nth-child(1)').addEventListener("input", function() {
+        let v = this.value.replace(/\D/g, "").slice(0, 16);
+        this.value = v.replace(/(\d{4})(?=\d)/g, "$1 ");
+    });
+
+    // mascara validade
+    document.querySelector("#cartao input:nth-child(2)").addEventListener("input", function() {
+        let v = this.value.replace(/\D/g, "").slice(0, 4);
+        if (v.length >= 3) {
+            this.value = v.replace(/(\d{2})(\d{0,2})/, "$1/$2");
+        } else {
+            this.value = v;
+        }
+    });
+
+    // mascara cvv
+    document.querySelector("#cartao input:nth-child(3)").addEventListener("input", function() {
+        this.value = this.value.replace(/\D/g, "").slice(0, 3);
+    });
+</script>
+
+<footer class="text-white mt-5 gradient-footer">
+    <div class="container py-4">
+        <div class="row">
+            <!-- Seção About -->
+            <div class="col-12 col-md-3">
+                <h5>Sobre Nós</h5>
+                <p>Carregamos o comprometimento com a saúde, bem-estar e qualidade de vida.
+                    Oferecendo estrutura moderna, equipe qualificada e um ambiente motivador para os seus objetivos! </p>
+            </div>
+
+            <!-- Links Rápidos -->
+            <div class="col-12 col-md-3">
+                <h5>Links Úteis</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="list-item text-white">Home</a></li>
+                    <li><a href="#" class="list-item text-white">Produtos</a></li>
+                    <li><a href="#" class="list-item text-white">Política de Privacidade</a></li>
+                </ul>
+            </div>
+
+            <!-- Contato -->
+            <div class="col-12 col-md-3">
+                <h5>Contato</h5>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-envelope"></i> academiaxcontato@gmail.com</li>
+                    <li><i class="bi bi-phone"></i> (21) 1234-5678</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 border-start border-light ps-3 mt-4 mt-md-0 d-flex align-items-center justify-content-center">
+                <a href="index.html" class="me-3">
+                    <img src="IMG_5571.png" alt="Logo Academia X" width="100">
+                </a>
+                <a href="https://www.gsuplementos.com.br/">
+                    <img src="growth_logo.png" target="_blank" rel="noopener noreferrer" alt="Logo Growth Suplementos" width="100">
+                </a>
+            </div>
+        </div>
+        <hr class="bg-light">
+        <div class="text-center">
+            <p class="mb-0">2025 Academia X. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
